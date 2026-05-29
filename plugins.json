@@ -1,0 +1,32 @@
+[
+  {
+    "name": "CollectionImages",
+    "project": "jellyfin-plugins/collection-posters",
+    "manifest_url": "https://gitlab.com/jellyfin-plugins/collection-posters/-/raw/main/manifest.json",
+    "local_manifest": "../collection-posters/manifest.json"
+  },
+  {
+    "name": "CollectionSync",
+    "project": "jellyfin-plugins/collection-sync",
+    "manifest_url": "https://gitlab.com/jellyfin-plugins/collection-sync/-/raw/main/manifest.json",
+    "local_manifest": "../collection-sync/manifest.json"
+  },
+  {
+    "name": "CollectionMemberships",
+    "project": "jellyfin-plugins/collection-memberships",
+    "manifest_url": "https://gitlab.com/jellyfin-plugins/collection-memberships/-/raw/main/manifest.json",
+    "local_manifest": "../collections-section/manifest.json"
+  },
+  {
+    "name": "LibraryCovers",
+    "project": "jellyfin-plugins/library-covers",
+    "manifest_url": "https://gitlab.com/jellyfin-plugins/library-covers/-/raw/main/manifest.json",
+    "local_manifest": "../library-covers/manifest.json"
+  },
+  {
+    "name": "PeopleAggregation",
+    "project": "jellyfin-plugins/people-aggregation",
+    "manifest_url": "https://gitlab.com/jellyfin-plugins/people-aggregation/-/raw/main/manifest.json",
+    "local_manifest": "../people-shows-section/manifest.json"
+  }
+]

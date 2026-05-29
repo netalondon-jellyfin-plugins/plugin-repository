@@ -1,0 +1,19 @@
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  image: python:3.12-alpine
+  script:
+    - python scripts/build-manifest.py --plugins plugins.json --output public/manifest.json
+    - python -m json.tool public/manifest.json >/dev/null
+  pages: true
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "pipeline"
+    - if: $CI_PIPELINE_SOURCE == "web"
+    - if: $CI_PIPELINE_SOURCE == "schedule"
