@@ -2,31 +2,31 @@
   {
     "name": "CollectionImages",
     "project": "jellyfin-plugins/collection-posters",
-    "manifest_url": "https://gitlab.com/jellyfin-plugins/collection-posters/-/raw/main/manifest.json",
+    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fcollection-posters/repository/files/manifest.json/raw?ref=main",
     "local_manifest": "../collection-posters/manifest.json"
   },
   {
     "name": "CollectionSync",
     "project": "jellyfin-plugins/collection-sync",
-    "manifest_url": "https://gitlab.com/jellyfin-plugins/collection-sync/-/raw/main/manifest.json",
+    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fcollection-sync/repository/files/manifest.json/raw?ref=main",
     "local_manifest": "../collection-sync/manifest.json"
   },
   {
     "name": "CollectionMemberships",
     "project": "jellyfin-plugins/collection-memberships",
-    "manifest_url": "https://gitlab.com/jellyfin-plugins/collection-memberships/-/raw/main/manifest.json",
+    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fcollection-memberships/repository/files/manifest.json/raw?ref=main",
     "local_manifest": "../collections-section/manifest.json"
   },
   {
     "name": "LibraryCovers",
     "project": "jellyfin-plugins/library-covers",
-    "manifest_url": "https://gitlab.com/jellyfin-plugins/library-covers/-/raw/main/manifest.json",
+    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Flibrary-covers/repository/files/manifest.json/raw?ref=main",
     "local_manifest": "../library-covers/manifest.json"
   },
   {
     "name": "PeopleAggregation",
     "project": "jellyfin-plugins/people-aggregation",
-    "manifest_url": "https://gitlab.com/jellyfin-plugins/people-aggregation/-/raw/main/manifest.json",
+    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fpeople-aggregation/repository/files/manifest.json/raw?ref=main",
     "local_manifest": "../people-shows-section/manifest.json"
   }
 ]
