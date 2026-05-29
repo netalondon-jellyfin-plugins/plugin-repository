@@ -60,6 +60,17 @@ Optional variables:
 - `CATALOG_FETCH_TOKEN`: token with read access to the plugin repositories'
   `manifest.json` files. Required when the plugin repos are private.
 
+## Plugin Release Variables
+
+Set these in each plugin project so release jobs can refresh this catalog:
+
+- `PUBLIC_PLUGIN_PACKAGE_PROJECT_ID`: this repository's project ID. Use
+  `82680093` for `jellyfin-plugins/plugin-repository` on GitLab.com.
+- `PUBLIC_PACKAGE_TOKEN`: token with permission to upload packages to this
+  repository.
+- `PLUGIN_CATALOG_PROJECT_ID`: this repository's project ID. Use `82680093`.
+- `CATALOG_TRIGGER_TOKEN`: pipeline trigger token created in this repository.
+
 ## Local Validation
 
 ```bash
