@@ -32,6 +32,7 @@ triggers a rebuild.
 - CollectionMemberships: `jellyfin-plugins/collection-memberships`
 - LibraryCovers: `jellyfin-plugins/library-covers`
 - PeopleAggregation: `jellyfin-plugins/people-aggregation`
+- WhisperSubs Companion: `jellyfin-plugins/whisper-subs-companion`
 
 ## Release Pipeline Expectations
 

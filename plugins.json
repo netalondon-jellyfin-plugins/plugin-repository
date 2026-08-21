@@ -28,5 +28,11 @@
     "project": "jellyfin-plugins/people-aggregation",
     "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fpeople-aggregation/repository/files/manifest.json/raw?ref=main",
     "local_manifest": "../people-shows-section/manifest.json"
+  },
+  {
+    "name": "WhisperSubs Companion",
+    "project": "jellyfin-plugins/whisper-subs-companion",
+    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fwhisper-subs-companion/repository/files/manifest.json/raw?ref=main",
+    "local_manifest": "../whisper-subs-companion/manifest.json"
   }
 ]
