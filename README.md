@@ -28,6 +28,7 @@ triggers a rebuild.
 ## Included Plugins
 
 - CollectionImages: `jellyfin-plugins/collection-posters`
+- TMDB Collection Integrity: `jellyfin-plugins/tmdb-collection-integrity`
 - CollectionSync: `jellyfin-plugins/collection-sync`
 - CollectionMemberships: `jellyfin-plugins/collection-memberships`
 - LibraryCovers: `jellyfin-plugins/library-covers`
