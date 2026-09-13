@@ -30,9 +30,7 @@ triggers a rebuild.
 - CollectionImages: `jellyfin-plugins/collection-posters`
 - TMDB Collection Integrity: `jellyfin-plugins/tmdb-collection-integrity`
 - CollectionSync: `jellyfin-plugins/collection-sync`
-- CollectionMemberships: `jellyfin-plugins/collection-memberships`
 - LibraryCovers: `jellyfin-plugins/library-covers`
-- PeopleAggregation: `jellyfin-plugins/people-aggregation`
 - WebUiEnhancements: `jellyfin-plugins/web-ui-enhancements`
 - WhisperSubs Companion: `jellyfin-plugins/whisper-subs-companion`
 
