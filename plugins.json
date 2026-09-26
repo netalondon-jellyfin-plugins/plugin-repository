@@ -18,6 +18,12 @@
     "local_manifest": "../collection-sync/manifest.json"
   },
   {
+    "name": "EpisodeAlerts",
+    "project": "jellyfin-plugins/episode-alerts",
+    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fepisode-alerts/repository/files/manifest.json/raw?ref=main",
+    "local_manifest": "../episode-alerts/manifest.json"
+  },
+  {
     "name": "LibraryCovers",
     "project": "jellyfin-plugins/library-covers",
     "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Flibrary-covers/repository/files/manifest.json/raw?ref=main",
