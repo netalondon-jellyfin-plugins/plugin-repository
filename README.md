@@ -33,6 +33,7 @@ triggers a rebuild.
 - EpisodeAlerts: `jellyfin-plugins/episode-alerts`
 - LibraryCovers: `jellyfin-plugins/library-covers`
 - WebUiEnhancements: `jellyfin-plugins/web-ui-enhancements`
+- Shaderfin: `jellyfin-plugins/shaderfin`
 - WhisperSubs Companion: `jellyfin-plugins/whisper-subs-companion`
 
 ## Release Pipeline Expectations
