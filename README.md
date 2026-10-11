@@ -34,6 +34,7 @@ triggers a rebuild.
 - LibraryCovers: `jellyfin-plugins/library-covers`
 - WebUiEnhancements: `jellyfin-plugins/web-ui-enhancements`
 - Shaderfin: `jellyfin-plugins/shaderfin`
+- Restart Guard: `jellyfin-plugins/restart-guard`
 - WhisperSubs Companion: `jellyfin-plugins/whisper-subs-companion`
 
 ## Release Pipeline Expectations

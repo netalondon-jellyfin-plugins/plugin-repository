@@ -42,6 +42,12 @@
     "local_manifest": "../shaderfin/manifest.json"
   },
   {
+    "name": "Restart Guard",
+    "project": "jellyfin-plugins/restart-guard",
+    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Frestart-guard/repository/files/manifest.json/raw?ref=main",
+    "local_manifest": "../restart-guard/manifest.json"
+  },
+  {
     "name": "WhisperSubs Companion",
     "project": "jellyfin-plugins/whisper-subs-companion",
     "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fwhisper-subs-companion/repository/files/manifest.json/raw?ref=main",
