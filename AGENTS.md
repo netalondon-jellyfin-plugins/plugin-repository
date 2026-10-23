@@ -14,6 +14,9 @@ their release zips as its own releases.
   - `python3 -m json.tool public/manifest.json >/dev/null`
 - Test the collector:
   - `python3 -m unittest discover -s tests`
+- Create or replace the GitHub tokens:
+  - `scripts/setup-tokens.sh` is interactive and handles secrets: ask the
+    user to run it.
 
 ## Publishing
 
