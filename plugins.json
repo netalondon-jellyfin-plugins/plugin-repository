@@ -1,56 +1,56 @@
 [
   {
     "name": "CollectionImages",
-    "project": "jellyfin-plugins/collection-posters",
-    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fcollection-posters/repository/files/manifest.json/raw?ref=main",
-    "local_manifest": "../collection-posters/manifest.json"
+    "guid": "5f1bce1b-1056-493d-9f1a-fb09e56c20de",
+    "source": "gitlab",
+    "project": "jellyfin-plugins/collection-posters"
   },
   {
-    "name": "TMDB Collection Integrity",
-    "project": "jellyfin-plugins/tmdb-collection-integrity",
-    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Ftmdb-collection-integrity/repository/files/manifest.json/raw?ref=main",
-    "local_manifest": "../tmdb-collection-integrity/manifest.json"
+    "name": "Collection Doctor",
+    "guid": "9ad11d45-da76-45b3-b3d4-68fc922098ee",
+    "source": "gitlab",
+    "project": "jellyfin-plugins/collection-doctor"
   },
   {
     "name": "CollectionSync",
-    "project": "jellyfin-plugins/collection-sync",
-    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fcollection-sync/repository/files/manifest.json/raw?ref=main",
-    "local_manifest": "../collection-sync/manifest.json"
+    "guid": "f8a8b51d-8b1d-46f4-b71e-807e54670252",
+    "source": "gitlab",
+    "project": "jellyfin-plugins/collection-sync"
   },
   {
     "name": "EpisodeAlerts",
-    "project": "jellyfin-plugins/episode-alerts",
-    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fepisode-alerts/repository/files/manifest.json/raw?ref=main",
-    "local_manifest": "../episode-alerts/manifest.json"
+    "guid": "d08cd35c-fafc-40e1-813c-a2bd8443aaf2",
+    "source": "gitlab",
+    "project": "jellyfin-plugins/episode-alerts"
   },
   {
     "name": "LibraryCovers",
-    "project": "jellyfin-plugins/library-covers",
-    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Flibrary-covers/repository/files/manifest.json/raw?ref=main",
-    "local_manifest": "../library-covers/manifest.json"
+    "guid": "4710c94e-891b-4f07-ad98-078a18927893",
+    "source": "gitlab",
+    "project": "jellyfin-plugins/library-covers"
   },
   {
     "name": "WebUiEnhancements",
-    "project": "jellyfin-plugins/web-ui-enhancements",
-    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fweb-ui-enhancements/repository/files/manifest.json/raw?ref=main",
-    "local_manifest": "../web-ui-enhancements/manifest.json"
+    "guid": "27e88e6a-1a67-43f9-8c73-0b2082e19df2",
+    "source": "gitlab",
+    "project": "jellyfin-plugins/web-ui-enhancements"
   },
   {
     "name": "Shaderfin",
-    "project": "jellyfin-plugins/shaderfin",
-    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fshaderfin/repository/files/manifest.json/raw?ref=main",
-    "local_manifest": "../shaderfin/manifest.json"
+    "guid": "d5b73a6d-c07d-4520-bd53-90c623b8fe19",
+    "source": "gitlab",
+    "project": "jellyfin-plugins/shaderfin"
   },
   {
     "name": "Restart Guard",
-    "project": "jellyfin-plugins/restart-guard",
-    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Frestart-guard/repository/files/manifest.json/raw?ref=main",
-    "local_manifest": "../restart-guard/manifest.json"
+    "guid": "472f8259-5134-43c8-b253-0590b5620efa",
+    "source": "gitlab",
+    "project": "jellyfin-plugins/restart-guard"
   },
   {
     "name": "WhisperSubs Companion",
-    "project": "jellyfin-plugins/whisper-subs-companion",
-    "manifest_url": "https://gitlab.com/api/v4/projects/jellyfin-plugins%2Fwhisper-subs-companion/repository/files/manifest.json/raw?ref=main",
-    "local_manifest": "../whisper-subs-companion/manifest.json"
+    "guid": "b596b389-6aed-4e9b-ba7f-1e1c72fea103",
+    "source": "gitlab",
+    "project": "jellyfin-plugins/whisper-subs-companion"
   }
 ]
