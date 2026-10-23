@@ -1,83 +1,71 @@
 # Jellyfin Plugin Repository
 
-Single Jellyfin plugin catalog for the custom `jellyfin-plugins` projects.
+Single Jellyfin plugin catalog for the custom `netalondon-jellyfin-plugins` plugins.
 
 ## Jellyfin URL
 
-After GitLab Pages is enabled and the first pipeline succeeds, add this URL in
-Jellyfin under **Dashboard -> Plugins -> Repositories**:
+Add this URL in Jellyfin under **Dashboard -> Plugins -> Repositories**:
 
 ```text
-https://jellyfin-plugins.gitlab.io/plugin-repository/manifest.json
+https://netalondon-jellyfin-plugins.github.io/plugin-repository/manifest.json
 ```
 
-If GitLab assigns a unique Pages domain, use the URL shown in
-**Deploy -> Pages** and append `/manifest.json`.
+The GitLab catalog (`https://plugin-repository-ee1bc5.gitlab.io/manifest.json`) stays up until
+every server has switched.
 
 ## How It Works
 
-This repository does not use submodules. The Pages pipeline downloads each
-plugin repo's `manifest.json`, merges the entries, validates the result, and
-publishes `public/manifest.json`.
+The plugin repositories are private, so Jellyfin can't download their release zips. This repository
+is public, and its `collect` workflow copies each new zip into a release here, where anyone can
+download it.
 
-Submodules would also work, but every plugin release would then need to update
-the submodule pointer in this repository. Fetching the latest default-branch
-manifests keeps the catalog moving automatically after each release pipeline
-triggers a rebuild.
+The workflow runs when a plugin's release workflow starts it, every 15 minutes, and on every push to
+`main`. For each plugin in `plugins.json`, by `source`:
 
-## Included Plugins
+- `github`: reads `manifest.json` from the plugin repository's default branch. A version whose
+  `sourceUrl` points at this repository's releases is listed once its zip is mirrored here: the
+  workflow downloads the zip from the plugin's own release, checks its MD5 against the manifest, and
+  publishes it as release `<slug>-<version>`. Versions whose `sourceUrl` points elsewhere (older
+  zips on GitLab) are listed as they are.
+- `gitlab`: copies the plugin's entry, by `guid`, from the public GitLab catalog. This keeps the
+  catalog complete while plugins move to GitHub one by one.
 
-- CollectionImages: `jellyfin-plugins/collection-posters`
-- TMDB Collection Integrity: `jellyfin-plugins/tmdb-collection-integrity`
-- CollectionSync: `jellyfin-plugins/collection-sync`
-- EpisodeAlerts: `jellyfin-plugins/episode-alerts`
-- LibraryCovers: `jellyfin-plugins/library-covers`
-- WebUiEnhancements: `jellyfin-plugins/web-ui-enhancements`
-- Shaderfin: `jellyfin-plugins/shaderfin`
-- Restart Guard: `jellyfin-plugins/restart-guard`
-- WhisperSubs Companion: `jellyfin-plugins/whisper-subs-companion`
+The workflow deploys `manifest.json` to Pages only when it differs from the live one.
 
-## Release Pipeline Expectations
+A version whose zip doesn't match its MD5, or fails to download, is left out and fails the run; the
+rest of the catalog still deploys. A version whose plugin release isn't there yet is left out with a
+warning and picked up by a later run.
 
-Each plugin release pipeline should:
+## plugins.json
 
-1. Build and package the plugin zip.
-2. Upload the zip to the GitLab.com generic package registry.
-3. Update that plugin repo's `manifest.json` on `main`.
-4. Trigger this repository's pipeline so Pages republishes the aggregate
-   catalog.
+```json
+{
+  "name": "Shaderfin",
+  "guid": "d5b73a6d-c07d-4520-bd53-90c623b8fe19",
+  "source": "github",
+  "repo": "shaderfin"
+}
+```
 
-For Jellyfin to install updates unattended, both the aggregate manifest URL and
-each plugin version's `sourceUrl` must be reachable from the Jellyfin container
-without browser login.
+- `guid`: the plugin's Jellyfin guid, which picks its entry from the manifest.
+- `source`: `github` or `gitlab`.
+- `repo` (`github`): the repository in this organization, or `owner/name`.
+- `project` (`gitlab`): where it lives on GitLab, for reference.
 
-If the plugin source repositories stay private, configure this repository's CI
-with `CATALOG_FETCH_TOKEN` so it can read the private source manifests. The
-published package URLs still need to be public; the cleanest private-source
-setup is to upload release zips to this public repository's package registry
-and write those public package URLs into the plugin manifests.
+## Secrets
 
-## CI Variables
+- `PLUGIN_READ_TOKEN`: fine-grained token with Contents: read on the plugin repositories. Needed
+  once a plugin's `source` is `github`.
 
-Optional variables:
-
-- `CATALOG_FETCH_TOKEN`: token with read access to the plugin repositories'
-  `manifest.json` files. Required when the plugin repos are private.
-
-## Plugin Release Variables
-
-Set these in each plugin project so release jobs can refresh this catalog:
-
-- `PUBLIC_PLUGIN_PACKAGE_PROJECT_ID`: this repository's project ID. Use
-  `82680093` for `jellyfin-plugins/plugin-repository` on GitLab.com.
-- `PUBLIC_PACKAGE_TOKEN`: token with permission to upload packages to this
-  repository.
-- `PLUGIN_CATALOG_PROJECT_ID`: this repository's project ID. Use `82680093`.
-- `CATALOG_TRIGGER_TOKEN`: pipeline trigger token created in this repository.
+Releases here use the workflow's own `GITHUB_TOKEN`.
 
 ## Local Validation
 
 ```bash
-python3 scripts/build-manifest.py --plugins plugins.json --output public/manifest.json
+python3 scripts/collect.py --output public/manifest.json
 python3 -m json.tool public/manifest.json >/dev/null
+python3 -m unittest discover -s tests
 ```
+
+With GitHub plugins, `PLUGIN_READ_TOKEN` must be set, and `--dry-run` reports the zips it would
+mirror instead of mirroring them.
