@@ -54,10 +54,17 @@ warning and picked up by a later run.
 
 ## Secrets
 
-- `PLUGIN_READ_TOKEN`: fine-grained token with Contents: read on the plugin repositories. Needed
-  once a plugin's `source` is `github`.
+- `PLUGIN_READ_TOKEN`, here: fine-grained token with Contents: read on all of the organization's
+  repositories. Needed once a plugin's `source` is `github`.
+- `CATALOG_DISPATCH_TOKEN`, in each plugin repository (optional): fine-grained token with Actions:
+  read and write on this repository only. A plugin release uses it to start `collect` right away;
+  without it, the 15-minute schedule picks the release up.
 
 Releases here use the workflow's own `GITHUB_TOKEN`.
+
+To create both tokens, or replace them before they expire (366 days at most), run
+`scripts/setup-tokens.sh`. It opens each GitHub page, tests each token, and stores it as an Actions
+secret with `gh`, and writes it nowhere else.
 
 ## Local Validation
 
