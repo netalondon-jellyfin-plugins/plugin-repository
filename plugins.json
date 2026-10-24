@@ -2,20 +2,20 @@
   {
     "name": "CollectionImages",
     "guid": "5f1bce1b-1056-493d-9f1a-fb09e56c20de",
-    "source": "gitlab",
-    "project": "jellyfin-plugins/collection-posters"
+    "source": "github",
+    "repo": "collection-posters"
   },
   {
     "name": "Collection Doctor",
     "guid": "9ad11d45-da76-45b3-b3d4-68fc922098ee",
-    "source": "gitlab",
-    "project": "jellyfin-plugins/collection-doctor"
+    "source": "github",
+    "repo": "collection-doctor"
   },
   {
     "name": "CollectionSync",
     "guid": "f8a8b51d-8b1d-46f4-b71e-807e54670252",
-    "source": "gitlab",
-    "project": "jellyfin-plugins/collection-sync"
+    "source": "github",
+    "repo": "collection-sync"
   },
   {
     "name": "EpisodeAlerts",
@@ -26,26 +26,26 @@
   {
     "name": "LibraryCovers",
     "guid": "4710c94e-891b-4f07-ad98-078a18927893",
-    "source": "gitlab",
-    "project": "jellyfin-plugins/library-covers"
+    "source": "github",
+    "repo": "library-covers"
   },
   {
     "name": "WebUiEnhancements",
     "guid": "27e88e6a-1a67-43f9-8c73-0b2082e19df2",
-    "source": "gitlab",
-    "project": "jellyfin-plugins/web-ui-enhancements"
+    "source": "github",
+    "repo": "web-ui-enhancements"
   },
   {
     "name": "Shaderfin",
     "guid": "d5b73a6d-c07d-4520-bd53-90c623b8fe19",
-    "source": "gitlab",
-    "project": "jellyfin-plugins/shaderfin"
+    "source": "github",
+    "repo": "shaderfin"
   },
   {
     "name": "Restart Guard",
     "guid": "472f8259-5134-43c8-b253-0590b5620efa",
-    "source": "gitlab",
-    "project": "jellyfin-plugins/restart-guard"
+    "source": "github",
+    "repo": "restart-guard"
   },
   {
     "name": "WhisperSubs Companion",
